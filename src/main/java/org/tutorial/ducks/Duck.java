@@ -9,4 +9,7 @@ abstract class Duck {
         System.out.println("헤엄치기");
     };
     abstract void display();
+    public void fly() {
+        System.out.println("비행하기");
+    }
 }
