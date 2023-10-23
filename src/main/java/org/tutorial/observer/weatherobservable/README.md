@@ -14,3 +14,7 @@
 1. 디스플레이 정보를 표기하기 위한 Display 인터페이스를 추가
    - 각 디스플레이의 정보를 갱신하기 위한 update 메소드와 화면을 표기하기 위한 display 메소드가 존재함
 2. WeatherData 클래스의 measurementsChanged 메소드에서는 최신 측정 값을 조회하여, 각 display 를 갱신
+# Step4 원칙으로 추가 코드 살펴보기
+1. measurementsChanged 메소드 내의 각 display 를 갱신하는 코드가 이슈
+   - display 항목을 구체적인 구현에 맞춰 코딩하여 코드를 고치지 않으면 다른 display 항목의 추가/제거가 불가능함
+   - display 항목의 구성이 변경될 수 있어 캡슐화 처리가 필요함
