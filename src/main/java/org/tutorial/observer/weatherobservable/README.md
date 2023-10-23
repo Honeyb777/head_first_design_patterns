@@ -9,4 +9,8 @@
     - 기상 예보
 # Step2 Weather 클래스 살펴보기
 1. WeatherData 클래스는 온도, 습도, 기압을 반환하는 getter 메소드 3개가 존재함
-2. weatherData 에서 갱신된 값을 가져올 때마다 호출되는 measurementsChanged 메소드가 존재함
+2. WeatherData 에서 갱신된 값을 가져올 때마다 호출되는 measurementsChanged 메소드가 존재함
+# Step3 기상 스테이션용 코드 추가하기
+1. 디스플레이 정보를 표기하기 위한 Display 인터페이스를 추가
+   - 각 디스플레이의 정보를 갱신하기 위한 update 메소드와 화면을 표기하기 위한 display 메소드가 존재함
+2. WeatherData 클래스의 measurementsChanged 메소드에서는 최신 측정 값을 조회하여, 각 display 를 갱신
