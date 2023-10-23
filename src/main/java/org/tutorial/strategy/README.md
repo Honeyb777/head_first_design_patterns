@@ -13,4 +13,12 @@
 2. 각 오리 객체에서는 실행시에 이 변수에 특정 행동 형식(FlyWithWings, Squeak 등)의 레퍼런스를 다형적으로 설정하여 사용
 3. 나는 행동과 소리내는 행동은 Duck 클래스에서 직접 처리하지 않고, performFly 메소드와 performQuack() 메소드에 의해 참조되는 객체를 통해 사용
 4. MallardDuck 인스턴스 변수의 경우 생성자에서 quackBehavior 인스턴스 변수와 flyBehavior 인스턴스 변수를 상속받음
-   - 이때 타입은 Quack 형식과 FlyWithWings 형식을 사용함 
+   - 이때 타입은 Quack 형식과 FlyWithWings 형식을 사용함
+# Step3 동적으로 행동 지정하기
+1. 오리의 행동을 즉석에서 변경하기 위한 flyBehavior 와 quackBehavior 를 수정 할 수 있는 Setter 메소드 추기 
+2. Duck 클래스의 서브 클래스 ModelDuck 의 생성자에 FlyNoWay 형식과 Quack 형식을 사용해 구성
+3. flyBehavior 인터페이스 형식의 FlyRocketPowered 클래스를 추가
+4. MiniDickSimulator 클래스에서 ModelDuck 인스턴스를 새로 만들고 performFly 메소드를 호출
+5. 이후 ModelDuck 인스턴스에 Setter 메소드를 통해 flyBehavior 인터페이스 형식의 FlyRocketPowered 형식으로 수정
+6. ModelDuck 인스턴스의 performFly 메소드를 호출하여 수정된 flyBehavior 인터페이스 형식을 확인
+   
